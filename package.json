@@ -1,0 +1,16 @@
+{
+  "name": "svv-workspace",
+  "version": "1.0.0",
+  "description": "Secure Login System Workspace",
+  "main": "index.js",
+  "scripts": {
+    "dev:backend": "cd backend && node server.js",
+    "dev:frontend": "cd frontend && npm run dev -- --port 5173",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "test": "cd tests && npx cucumber-js",
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install && cd ../tests && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
